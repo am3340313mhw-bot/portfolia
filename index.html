@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="الموقع الشخصي لعلي محمد، طالب نظم معلومات الأعمال.">
+
+    <title>Ali Mohamed | Personal Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+        /* =========================
+           1. General Settings
+        ========================= */
+
+        :root {
+            --bg: #0b0b16;
+            --card: #151526;
+            --card-hover: #201b35;
+            --purple: #8b5cf6;
+            --purple-light: #c4b5fd;
+            --text: #f4f1ff;
+            --muted: #b6b1c9;
+            --border: rgba(196, 181, 253, 0.18);
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 72px;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: Tahoma, Arial, sans-serif;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        section,
+        header {
+            scroll-margin-top: 85px;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .purple-text {
+            color: var(--purple-light);
+        }
+
+        .english {
+            direction: ltr;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+
+        /* =========================
+           2. Navigation
+        ========================= */
+
+        .custom-navbar {
+            background: rgba(11, 11, 22, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar-brand {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar-brand:hover {
+            color: white;
+        }
+
+        .nav-link {
+            color: #ddd6fe !important;
+            font-size: 0.9rem;
+            margin: 0 3px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+        }
+
+        /* =========================
+           3. Hero Section
+        ========================= */
+
+        .hero {
+            min-height: 86vh;
+            display: flex;
+            align-items: center;
+            padding: 75px 0;
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(91, 33, 182, 0.23),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(124, 58, 237, 0.15),
+                    transparent 35%
+                );
+        }
+
+        .welcome {
+            color: var(--purple-light);
+            font-size: 0.95rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.35;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                120deg,
+                #c4b5fd,
+                #8b5cf6,
+                #e9d5ff
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: var(--muted);
+        }
+
+        .btn-purple {
+            display: inline-block;
+            background: linear-gradient(
+                135deg,
+                #8b5cf6,
+                #6d28d9
+            );
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            padding: 11px 22px;
+            transition: 0.3s;
+        }
+
+        .btn-purple:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        /* =========================
+           4. Profile Photo
+        ========================= */
+
+        .profile-card {
+            max-width: 370px;
+            margin: auto;
+            padding: 38px 20px;
+            border-radius: 24px;
+            text-align: center;
+            background: linear-gradient(
+                145deg,
+                #24183d,
+                var(--card)
+            );
+            border: 1px solid #49356a;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .profile-photo {
+            width: 165px;
+            height: 165px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--purple);
+            box-shadow: 0 0 28px rgba(139, 92, 246, 0.4);
+            background: #24183d;
+        }
+
+        .profile-photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+        }
+
+        .profile-card h3 {
+            font-weight: bold;
+        }
+
+        .profile-card p {
+            color: var(--muted);
+        }
+
+        .profile-divider {
+            width: 70px;
+            height: 3px;
+            background: var(--purple);
+            border: none;
+            margin: 20px auto;
+            opacity: 1;
+        }
+
+        /* =========================
+           5. Section Styles
+        ========================= */
+
+        .section-padding {
+            padding: 85px 0;
+        }
+
+        .alternate {
+            background: #10101e;
+            border-top: 1px solid rgba(255, 255, 255, 0.025);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.025);
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .section-label {
+            color: var(--purple-light);
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-top: 10px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           6. About
+        ========================= */
+
+        .about-card {
+            max-width: 900px;
+            margin: auto;
+            padding: 32px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+        }
+
+        .about-card p {
+            color: var(--muted);
+        }
+
+        .about-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           7. Skills
+        ========================= */
+
+        .skill-card {
+            height: 100%;
+            padding: 28px 18px;
+            text-align: center;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            background: var(--card-hover);
+            border-color: var(--purple);
+        }
+
+        .skill-card i {
+            font-size: 2.8rem;
+            color: var(--purple-light);
+        }
+
+        .skill-card h3 {
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .skill-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           8. Projects
+        ========================= */
+
+        .project-card {
+            height: 100%;
+            padding: 26px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--purple);
+        }
+
+        .project-icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 14px;
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--purple-light);
+            font-size: 1.8rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 17px 0 12px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .tech-list {
+            margin-bottom: 10px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.12);
+            color: var(--purple-light);
+            border: 1px solid rgba(196, 181, 253, 0.15);
+            border-radius: 6px;
+            padding: 3px 9px;
+            font-size: 0.75rem;
+            margin: 3px;
+        }
+
+        .project-link {
+            color: var(--purple-light);
+            margin-top: auto;
+            padding-top: 16px;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            color: white;
+        }
+
+        /* =========================
+           9. Education
+        ========================= */
+
+        .education-card {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+        }
+
+        .education-card h3 {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .education-card p {
+            color: var(--muted);
+        }
+
+        .education-icon {
+            font-size: 2.5rem;
+            color: var(--purple-light);
+            margin-bottom: 12px;
+        }
+
+        /* =========================
+           10. Contact
+        ========================= */
+
+        .contact-card {
+            max-width: 850px;
+            margin: auto;
+            padding: 45px 25px;
+            text-align: center;
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(139, 92, 246, 0.13),
+                    transparent 65%
+                ),
+                var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+        }
+
+        .contact-card h2 {
+            font-weight: 800;
+        }
+
+        .contact-card p {
+            color: var(--muted);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .social-links a {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--purple-light);
+            background: rgba(139, 92, 246, 0.12);
+            border-radius: 12px;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: white;
+            background: var(--purple);
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           11. Footer
+        ========================= */
+
+        footer {
+            background: #080810;
+            border-top: 1px solid var(--border);
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        footer .copyright {
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+
+        /* =========================
+           12. Responsive Design
+        ========================= */
+
+        @media (max-width: 991px) {
+            .hero {
+                min-height: auto;
+                padding: 65px 0;
+            }
+
+            .profile-card {
+                margin-top: 15px;
+            }
+
+            .navbar-collapse {
+                padding-top: 12px;
+            }
+
+            .nav-link {
+                padding: 8px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                font-size: 0.95rem;
+            }
+
+            .hero {
+                padding: 50px 0;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.25rem;
+            }
+
+            .profile-card {
+                padding: 30px 18px;
+            }
+
+            .profile-photo {
+                width: 145px;
+                height: 145px;
+            }
+
+            .about-card,
+            .project-card,
+            .education-card {
+                padding: 22px;
+            }
+
+            .contact-card {
+                padding: 35px 18px;
+            }
+
+            .btn-purple {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         Navigation Bar
+    ========================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+
+            <a class="navbar-brand" href="#home">
+                Ali<span class="purple-text">.</span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="فتح القائمة"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">الرئيسية</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">نبذة عني</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">مهاراتي</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">مشاريعي</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">التعليم</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">تواصل معي</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         Hero Section
+    ========================== -->
+
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-7">
+
+                    <p class="welcome">
+                        مرحبًا بك في موقعي الشخصي
+                    </p>
+
+                    <p class="purple-text english">
+                        Welcome to my personal portfolio
+                    </p>
+
+                    <h1>
+                        أنا <span class="gradient-text">علي محمد</span>
+                    </h1>
+
+                    <h2>طالب نظم معلومات الأعمال</h2>
+
+                    <p class="purple-text english">
+                        Business Information Systems Student
+                    </p>
+
+                    <p class="hero-description">
+                        أهتم بالتكنولوجيا وتحليل الأعمال وتصميم المواقع،
+                        وأسعى إلى تطوير مهاراتي وبناء حلول رقمية تجمع
+                        بين التكنولوجيا واحتياجات الأعمال.
+                    </p>
+
+                    <p class="muted english">
+                        I am interested in technology, business analysis,
+                        and web design. I aim to develop my skills and
+                        build useful digital solutions.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+
+                        <a href="#projects" class="btn-purple">
+                            <i class="bi bi-code-slash"></i>
+                            استكشف مشاريعي
+                        </a>
+
+                        <a href="#contact" class="btn btn-outline-light">
+                            <i class="bi bi-envelope"></i>
+                            تواصل معي
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Personal Photo Card -->
+                <div class="col-lg-5">
+                    <div class="profile-card">
+
+                        <div class="profile-photo">
+                            <img
+                                src="ali mohamed.jpg"
+                                alt="Ali Mohamed - Personal Profile Photo"
+                                loading="eager"
+                            >
+                        </div>
+
+                        <h3>Ali Mohamed</h3>
+
+                        <p>Business Information Systems</p>
+
+                        <hr class="profile-divider">
+
+                        <p class="mb-0">
+                            Learning Today, Building Tomorrow
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         About Section
+    ========================== -->
+
+    <section id="about" class="section-padding">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">ABOUT ME | نبذة عني</span>
+                <h2>من أنا؟</h2>
+                <p>تعرف على اهتماماتي وأهدافي</p>
+            </div>
+
+            <div class="about-card">
+
+                <p>
+                    أنا علي محمد، طالب في تخصص نظم معلومات الأعمال.
+                    أهتم بكيفية الجمع بين المعرفة الإدارية والتقنيات
+                    الحديثة لفهم احتياجات المؤسسات وتطوير حلول مناسبة لها.
+                </p>
+
+                <p class="english">
+                    My name is Ali Mohamed. I am a Business Information
+                    Systems student interested in combining business
+                    knowledge with modern technology.
+                </p>
+
+                <p>
+                    أعمل على تطوير مهاراتي في تصميم صفحات الويب والتعلم
+                    المستمر من خلال المشاريع والتطبيق العملي، وأسعى
+                    إلى اكتساب خبرة تساعدني في مسيرتي المهنية.
+                </p>
+
+                <p class="english mb-0">
+                    I am continuously learning web design and practical
+                    development to improve my technical and professional skills.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         Skills Section
+    ========================== -->
+
+    <section id="skills" class="section-padding alternate">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">MY SKILLS | مهاراتي</span>
+                <h2>مهاراتي التقنية والشخصية</h2>
+                <p>Technical & Business Skills</p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-card">
+                        <i class="bi bi-filetype-html"></i>
+                        <h3>HTML5</h3>
+                        <p>بناء صفحات الويب وتنظيم محتواها</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-card">
+                        <i class="bi bi-filetype-css"></i>
+                        <h3>CSS3</h3>
+                        <p>تنسيق الصفحات والألوان والتصميم</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-card">
+                        <i class="bi bi-bootstrap"></i>
+                        <h3>Bootstrap</h3>
+                        <p>تصميم مواقع متجاوبة مع الشاشات</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-card">
+                        <i class="bi bi-bar-chart"></i>
+                        <h3>Business Analysis</h3>
+                        <p>فهم وتحليل احتياجات الأعمال</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-card">
+                        <i class="bi bi-database"></i>
+                        <h3>Information Systems</h3>
+                        <p>مفاهيم نظم المعلومات وإدارة البيانات</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-card">
+                        <i class="bi bi-people"></i>
+                        <h3>Teamwork</h3>
+                        <p>التعاون والتواصل وحل المشكلات</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         Projects Section
+    ========================== -->
+
+    <section id="projects" class="section-padding">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">MY PROJECTS | مشاريعي</span>
+                <h2>مشاريعي وأعمالي</h2>
+                <p>Selected Projects & Learning Practice</p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+
+                        <div class="project-icon">
+                            <i class="bi bi-person-vcard"></i>
+                        </div>
+
+                        <h3>Personal Portfolio</h3>
+
+                        <p>
+                            موقع شخصي للتعريف بي وبمهاراتي ومشاريعي،
+                            باستخدام HTML وCSS وBootstrap.
+                        </p>
+
+                        <p class="english">
+                            A personal website showcasing my skills
+                            and projects using HTML, CSS, and Bootstrap.
+                        </p>
+
+                        <div class="tech-list">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            <i class="bi bi-github"></i>
+                            GitHub
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+
+                        <div class="project-icon">
+                            <i class="bi bi-window"></i>
+                        </div>
+
+                        <h3>Landing Page</h3>
+
+                        <p>
+                            نموذج صفحة تعريفية تجريبية لخدمة أو منتج،
+                            مع تصميم بسيط ومتجاوب.
+                        </p>
+
+                        <p class="english">
+                            A sample landing page focused on usability
+                            and responsive design.
+                        </p>
+
+                        <div class="tech-list">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            <i class="bi bi-github"></i>
+                            GitHub
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+
+                        <div class="project-icon">
+                            <i class="bi bi-clipboard-data"></i>
+                        </div>
+
+                        <h3>Business Systems Concept</h3>
+
+                        <p>
+                            فكرة تعليمية لاستكشاف استخدام نظم المعلومات
+                            في تنظيم البيانات ودعم الأعمال.
+                        </p>
+
+                        <p class="english">
+                            A learning concept exploring information
+                            systems for business processes.
+                        </p>
+
+                        <div class="tech-list">
+                            <span class="tech-tag">Business</span>
+                            <span class="tech-tag">BIS</span>
+                        </div>
+
+                        <a href="#contact" class="project-link">
+                            قريبًا | Coming Soon
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="muted text-center mt-4">
+                ملاحظة: هذه أمثلة تدريبية. حدّثها بمشاريعك الفعلية
+                وروابطها قبل التسليم.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         Education Section
+    ========================== -->
+
+    <section id="education" class="section-padding alternate">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">EDUCATION | التعليم</span>
+                <h2>مسيرتي التعليمية</h2>
+                <p>Academic Background</p>
+            </div>
+
+            <div class="education-card">
+
+                <div class="education-icon">
+                    <i class="bi bi-mortarboard"></i>
+                </div>
+
+                <h3>نظم معلومات الأعمال</h3>
+
+                <p class="english">
+                    Business Information Systems (BIS)
+                </p>
+
+                <p>
+                    طالب جامعي مهتم بالتكنولوجيا والأعمال وتحليل
+                    احتياجات المؤسسات، وأسعى إلى تطوير مهاراتي
+                    الأكاديمية والعملية باستمرار.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         Contact Section
+    ========================== -->
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+
+            <div class="contact-card">
+
+                <span class="section-label">
+                    GET IN TOUCH | تواصل معي
+                </span>
+
+                <h2 class="mt-3">لنبقَ على تواصل</h2>
+
+                <p>
+                    يسعدني التواصل لتبادل الأفكار والتعلم والعمل على المشاريع.
+                </p>
+
+                <p class="english">
+                    Feel free to connect with me and discuss new ideas.
+                </p>
+
+                <!-- استبدل البريد ببريدك الحقيقي -->
+                <a
+                    href="mailto:your.email@example.com"
+                    class="btn-purple mt-3"
+                >
+                    <i class="bi bi-envelope"></i>
+                    البريد الإلكتروني
+                </a>
+
+                <div class="social-links mt-4">
+
+                    <!-- ضع رابط حساب GitHub الخاص بك -->
+                    <a
+                        href="https://github.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                    >
+                        <i class="bi bi-github"></i>
+                    </a>
+
+                    <!-- ضع رابط حساب LinkedIn الخاص بك -->
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer>
+        <div class="container">
+
+            <p>صُنع باهتمام بواسطة علي محمد</p>
+
+            <p class="english">
+                Designed & Built by Ali Mohamed
+            </p>
+
+            <p class="copyright">
+                &copy; 2026 Ali Mohamed. All Rights Reserved.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
